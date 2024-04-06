@@ -1,0 +1,124 @@
+<html>
+<style>
+.id1,.id2
+{
+margin-left: 100px;
+height:20px;
+width: 70px;
+margin-bottom: 5px;
+margin-top: 5px;
+}
+.l1,.l2
+{
+    margin-top: 6px;
+    margin-left: 100px;
+    display:inline-block;
+}
+button{
+    background-color: blue;
+    color: white;
+    padding-left: 10px ;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border:none;
+    border-radius: 2px;
+    margin-left: 160px;
+    transition-duration: 2s;
+    transition-property: button;
+    cursor: pointer;
+}
+
+    strong
+    {
+        padding-left: 40px;
+        display:inline-block;
+    }
+
+.s1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: right;
+    
+}
+h3{
+    text-align: center;
+}
+button:hover
+{
+    opacity: 7px;
+}
+body{
+    background-image: url(../bmicalc.html/portrait-young-sportive-girl-training-with-dumbbells-isolated-blue-background-neon_155003-45614.avif);
+    background-size: cover;
+    color:white;
+}
+
+.p1{
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 0px;
+}
+.p2{
+    margin-left: 40px;
+    margin-top: 0px;
+}
+</style>
+
+
+
+<body>
+
+<div>
+    <h3> BMI Calculator</h3>
+    
+<p class="s1">
+    (English  | Metric )
+</p>
+</div>
+<div>
+   &nbsp; <strong>1.Height</strong>
+    <br>
+    <label class="l1" for="html">Meters</label> 
+   
+    <br>
+    <input class="id1" id="height" type="textbox">
+   
+    </div>
+   &nbsp; <strong>2.Weight</strong>
+    <br>
+    <label class="l2"   >kilograms</label>
+    <br>
+    <input class="id2" id="weight" type="textbox">
+    <br>
+    <p id="result" class="p1"><strong></strong></p>
+    <p id="out" class="p2"></p>
+
+    <br>
+    <button id="btn" onClick="bmi()">Calculate</button>
+    
+
+
+<script>
+
+    function bmi()
+    {
+        var h=document.getElementById("height").value;
+        var w=document.getElementById('weight').value;
+        var bmi = w/(h*h);
+        var total=bmi.toFixed(2);
+        document.getElementById('result').innerHTML= "Your bmi is " + total;
+        if(bmi<18.6)
+        {
+            out.innerHTML= '(Underweight)';
+        }
+        else if(bmi>18.6 &&bmi<24.9)
+        out.innerHTML='(Normal)';
+        else 
+        out.innerHTML= '(Obese)';
+        }
+</script>
+
+    </body>
+    </html>
